@@ -101,6 +101,22 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
         layer.setStyle(routeStyles.highlight);
     };
 
+    const getRouteLayer = (num: number): L.FeatureGroup => {
+        // Since we're reversed we have to look from the end
+        const index = routeFeatures.length - num;
+        const layers = routeFeatures[index]?.getLayers();
+
+        return <L.FeatureGroup>layers[0];
+    };
+
+    const selectLayer = (routeNum: number, lg: L.FeatureGroup) => {
+        // Update the URL so that a reload wouldn't lose place.
+        window.location.hash = '' + routeNum;
+
+        highlightLayer(lg);
+        map.fitBounds(lg.getBounds());
+    };
+
     const createGeoJsonLayer = (routes: GeoJson.FeatureCollection) => L.geoJSON(routes, {
         style: routeStyles.base,
         onEachFeature: (feature, layer: L.FeatureGroup) => {
@@ -108,7 +124,7 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
                 .addLayer(
                     layer
                         .bindPopup(popupForFeature(feature.properties))
-                        .on('click', () => highlightLayer(layer)))
+                        .on('click', () => selectLayer(feature.properties?.number, layer)))
                 .addTo(map);
 
             routeFeatures.push(lg);
@@ -122,6 +138,19 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
         const perColumn = Math.round(routeFeatures.length / routeColumns.length);
         let colIndex = 0;
 
+        // Select a route without going through user Leaflet interaction. We'll
+        // want to open the popup programmatically.
+        const selectRouteWithPopup = (num: number) => {
+            const layer = getRouteLayer(num);
+            if (layer === null) return;
+
+            selectLayer(num, layer);
+            // Back to the top
+            // TODO: Scroll not to the top of the page, but the top of the map
+            window.scrollTo(0, 0);
+            layer.openPopup();
+        }
+
         routes.features.reverse().forEach((route, i) => {
             const props = route.properties;
 
@@ -130,27 +159,20 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
             node.setAttribute('title', props?.name);
 
             node.appendChild(document.createTextNode(`#${props?.number??''} - ${props?.name?? 'Unnamed'}`));
-            node.onclick = () => {
-                // Since we're reversed we have to look from the end
-                const group = routeFeatures[routeFeatures.length - 1 - i];
-                // TODO: the "eachLayer" thing is pretty gross.
-                group.eachLayer((l: L.Layer) => {
-                    const lg = <L.FeatureGroup>l;
-
-                    highlightLayer(lg);
-                    lg.openPopup();
-                    map.fitBounds(lg.getBounds());
-                });
-
-                // Back to the top
-                // TODO: Scroll not to the top of the page, but the top of the map
-                window.scrollTo(0, 0);
-            };
+            // Off by 1 so that we can go from 0-based array indexing to
+            // 1-based route numbering.
+            node.onclick = () => selectRouteWithPopup(i+1);
 
             routeColumns[colIndex]?.appendChild(node);
             if (i+1 >= (1+colIndex) * perColumn) {
                 colIndex++;
             }
         });
+
+        // Allow choosing an initial route to select in the URL fragment
+        const num = +window.location.hash.substr(1);
+        if (num > 0 && num <= routes.features.length) {
+            selectRouteWithPopup(num);
+        }
     });
 })();

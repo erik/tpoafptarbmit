@@ -4,7 +4,8 @@
   "description": "Archive of The Passage of a Few People Through a Rather Brief Moment in Time",
   "main": "index.js",
   "scripts": {
-    "build": "parcel index.html",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
     "tsc": "tsc --noEmit --watch"
   },
   "author": "",
@@ -24,9 +25,11 @@
     "typescript": "^3.7.5"
   },
   "staticFiles": {
-    "staticPath": [{
-      "staticPath": "data",
-      "staticOutDir": "data"
-    }]
+    "staticPath": [
+      {
+        "staticPath": "data",
+        "staticOutDir": "data"
+      }
+    ]
   }
 }
