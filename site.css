@@ -9,6 +9,11 @@
     height: 85vh;
 }
 
+.intro {
+    max-width: 620px;
+    @apply mx-auto;
+}
+
 .route-info {
     max-height: 300px;
     overflow-y: scroll;
