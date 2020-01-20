@@ -1,6 +1,5 @@
 tmp/
 ve
-*.geojson
 .cache/
 dist/
 node_modules/

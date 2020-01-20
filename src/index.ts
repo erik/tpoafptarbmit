@@ -20,13 +20,6 @@ const LAYERS: {[key: string]: L.TileLayer} = {
             'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
         }
     ),
-    'Open Topo': L.tileLayer(
-        'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-        {
-            maxZoom: 17,
-            attribution:
-            'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-        }),
     'Stamen': L.tileLayer(
         'https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.png', {
             attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -54,7 +47,7 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
 
     const map = L.map('map', {
         center: CALIFORNIA_DONUTS,
-        zoom: 13,
+        zoom: 10,
         layers: [LAYERS['Stamen'], donutShop],
     });
 
@@ -75,10 +68,6 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
     const routeStyles: {[key: string]: L.PathOptions} = {
         base: {
             color: '#A0C8D8',
-            weight: 2,
-        },
-        background: {
-            color: '#A0C8D83F',
             weight: 2,
         },
         highlight: {
