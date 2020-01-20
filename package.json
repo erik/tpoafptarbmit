@@ -26,10 +26,7 @@
   },
   "staticFiles": {
     "staticPath": [
-      {
-        "staticPath": "data",
-        "staticOutDir": "data"
-      }
+      "data"
     ]
   }
 }

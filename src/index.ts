@@ -37,7 +37,7 @@ const LAYERS: {[key: string]: L.TileLayer} = {
 };
 
 function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
-    return fetch('/data/index.geojson')
+    return fetch('/index.geojson')
         .then(res => res.json())
         .then(json => <GeoJson.FeatureCollection>json);
 }
@@ -101,12 +101,13 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
         layer.setStyle(routeStyles.highlight);
     };
 
-    const getRouteLayer = (num: number): L.FeatureGroup => {
+    const getRouteLayer = (num: number): L.FeatureGroup | null => {
         // Since we're reversed we have to look from the end
         const index = routeFeatures.length - num;
         const layers = routeFeatures[index]?.getLayers();
-
-        return <L.FeatureGroup>layers[0];
+        return layers?.length > 0
+            ? <L.FeatureGroup>layers[0]
+            : null;
     };
 
     const selectLayer = (routeNum: number, lg: L.FeatureGroup) => {
