@@ -1,0 +1,86 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "LineString",
+        "coordinates": [
+            [
+                -118.2929244,
+                34.06904332
+            ],
+            [
+                -118.292928,
+                34.068871
+            ],
+            [
+                -118.292959,
+                34.067367
+            ],
+            [
+                -118.292072,
+                34.067359
+            ],
+            [
+                -118.291903,
+                34.067361
+            ],
+            [
+                -118.291792,
+                34.067348
+            ],
+            [
+                -118.29168,
+                34.06733
+            ],
+            [
+                -118.291515,
+                34.067292
+            ],
+            [
+                -118.291281,
+                34.067204
+            ],
+            [
+                -118.291072,
+                34.067124
+            ],
+            [
+                -118.2909798,
+                34.06722405
+            ],
+            [
+                -118.2910236,
+                34.06725052
+            ],
+            [
+                -118.2909664,
+                34.06726027
+            ],
+            [
+                -118.290963,
+                34.06732018
+            ],
+            [
+                -118.2910269,
+                34.06734386
+            ],
+            [
+                -118.2910236,
+                34.0674386
+            ],
+            [
+                -118.2910875,
+                34.06744278
+            ]
+        ]
+    },
+    "properties": {
+        "name": "House Rules",
+        "number": 491,
+        "url": "http://www.thepassageride.com/Routes/491",
+        "map_url": "https://www.gmap-pedometer.com/?r=7370578",
+        "description": "<p>\n <br/>\n The game is what you imagine it to be. You may, if you wish, try to play foosball as if you were riding a bicycle or air hockey as if you were bowling. You may even try to bowl as if you were bowling. One thing we will not be doing this evening, however, is riding bicycles as if we are riding bicycles. We've done that before. Also it is raining, or at least it will be raining shortly after the start of the ride. So we are going to Shatto Lanes to play some kind of game and/or another.\n</p>\n\n<p>\n <a class=\"urllink\" href=\"https://www.gmap-pedometer.com/?r=7370578\" rel=\"nofollow\" target=\"_blank\">\n  Route Map\n </a>\n</p>\n\n<p class=\"vspace\">\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/490\">\n  Previous Route\n </a>\n |\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/492\">\n  Next Route\n </a>\n</p>\n",
+        "media": [],
+        "thumbs": [],
+        "geojson": "routes/491_house_rules.geojson"
+    }
+}

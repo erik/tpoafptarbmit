@@ -1,0 +1,48 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "LineString",
+        "coordinates": [
+            [
+                -118.2930994,
+                34.06904932
+            ],
+            [
+                -118.29291,
+                34.06906
+            ],
+            [
+                -118.29293,
+                34.06737
+            ],
+            [
+                -118.29252,
+                34.06737
+            ],
+            [
+                -118.29165,
+                34.06738
+            ],
+            [
+                -118.29114,
+                34.06715
+            ],
+            [
+                -118.291136,
+                34.06738736
+            ]
+        ]
+    },
+    "properties": {
+        "name": "Taking the Lane",
+        "number": 238,
+        "url": "http://www.thepassageride.com/Routes/238",
+        "map_url": "http://www.gmap-pedometer.com/?r=6219497",
+        "description": "<p>\n <br/>\n <img alt=\"\" src=\"media/http_www.thepassageride.com_wiki_uploads_routes_238_postimage.jpg\" title=\"\"/>\n</p>\n\n<p class=\"vspace\">\n <br/>\n One or more persons during a certain weather event drop their weekly routine of movement and action, their routes, their exploratory and athletic activities, and let themselves be drawn by the attractions of the lane and the ten pins they find there.\n</p>\n\n<p class=\"vspace\">\n It's bowling night.\n</p>\n\n<p class=\"vspace\">\n We will meet tonight, Wednesday, at 8:30pm at California Donuts #21, at the corner of 3rd &amp; New Hampshire, in Los Angeles, CA.\n <br/>\n We will head over to Shatto Lanes at 9pm.\n <br/>\n We will endeavor to stay dry.\n</p>\n\n<p class=\"vspace\">\n Yes, sorry, we're heeding the National Weather Service's prediction of rain (an 80% chance after 10pm) and executing our bowling contingency plan. (\n <a class=\"urllink\" href=\"http://www.thepassageride.com/wiki/uploads/Main/Passage158_0809.jpg\" rel=\"nofollow\" target=\"_blank\">\n  It's fun and healthy!\n </a>\n ) (And\n <a class=\"urllink\" href=\"http://www.thepassageride.com/FAQ#rain\" rel=\"nofollow\" target=\"_blank\">\n  you can't say we didn't warn you!\n </a>\n ) But if you REALLY like riding in the rain, well, you can come bowl and, at the end of the night, will no doubt have a lovely -- and wet -- ride home.\n</p>\n\n<p>\n <a class=\"urllink\" href=\"http://www.gmap-pedometer.com/?r=6219497\" rel=\"nofollow\" target=\"_blank\">\n  Route Map\n </a>\n</p>\n\n<p class=\"vspace\">\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/237\">\n  Previous Route\n </a>\n |\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/239\">\n  Next Route\n </a>\n</p>\n",
+        "media": [
+            "http://www.thepassageride.com/wiki/uploads/Routes/238_postimage.jpg"
+        ],
+        "thumbs": [],
+        "geojson": "routes/238_taking_the_lane.geojson"
+    }
+}

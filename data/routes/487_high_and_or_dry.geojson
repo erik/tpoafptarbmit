@@ -1,0 +1,94 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "LineString",
+        "coordinates": [
+            [
+                -118.293195,
+                34.06886113
+            ],
+            [
+                -118.292928,
+                34.068871
+            ],
+            [
+                -118.292959,
+                34.067367
+            ],
+            [
+                -118.292072,
+                34.067359
+            ],
+            [
+                -118.291903,
+                34.067361
+            ],
+            [
+                -118.291792,
+                34.067348
+            ],
+            [
+                -118.29168,
+                34.06733
+            ],
+            [
+                -118.291515,
+                34.067292
+            ],
+            [
+                -118.291281,
+                34.067204
+            ],
+            [
+                -118.291061,
+                34.06712
+            ],
+            [
+                -118.2909816,
+                34.06723799
+            ],
+            [
+                -118.291025,
+                34.06726838
+            ],
+            [
+                -118.2910017,
+                34.06727943
+            ],
+            [
+                -118.290955,
+                34.06727667
+            ],
+            [
+                -118.2909516,
+                34.06732087
+            ],
+            [
+                -118.290965,
+                34.06733468
+            ],
+            [
+                -118.2910283,
+                34.06735126
+            ],
+            [
+                -118.2910917,
+                34.06736784
+            ],
+            [
+                -118.2911384,
+                34.06737336
+            ]
+        ]
+    },
+    "properties": {
+        "name": "High and/or Dry",
+        "number": 487,
+        "url": "http://www.thepassageride.com/Routes/487",
+        "map_url": "https://www.gmap-pedometer.com/?r=7338682",
+        "description": "<p>\n <br/>\n Come for the weather, they say. But here we are: another rainy week in Los Angeles. Two for two so far this year. The rain stays away just long enough for us to forget about it, and then all at once, it's clogged storm drains, car crashes and palm fronds everywhere. It seems like now is a good time to either run for higher ground or seek shelter from the storm. So we will be... doing one of those things tonight.\n</p>\n\n<p>\n <a class=\"urllink\" href=\"https://www.gmap-pedometer.com/?r=7338682\" rel=\"nofollow\" target=\"_blank\">\n  Route Map\n </a>\n</p>\n\n<p class=\"vspace\">\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/486\">\n  Previous Route\n </a>\n |\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/488\">\n  Next Route\n </a>\n</p>\n",
+        "media": [],
+        "thumbs": [],
+        "geojson": "routes/487_high_and_or_dry.geojson"
+    }
+}

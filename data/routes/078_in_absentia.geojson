@@ -1,0 +1,19 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "LineString",
+        "coordinates": []
+    },
+    "properties": {
+        "name": "In Absentia",
+        "number": 78,
+        "url": "http://www.thepassageride.com/Routes/78",
+        "map_url": null,
+        "description": "<p>\n <br/>\n <img alt=\"\" src=\"media/http_www.thepassageride.com_wiki_uploads_routes_78_windblows.jpg\" title=\"\"/>\n</p>\n\n<p class=\"vspace\">\n <br/>\n We (Nathan and Sean) are still away this week, so another of our lieutenants (Jeff!) is leading this week. There was talk about a replay of last year's ride to Christmas Tree Lane (#27), but now it sounds like he might do the epic Mosey route we covered (#69) or perhaps the crossword ride (#68). Alternatively, if the weather is uncooperative, there is always the chance of a trip to Shatto Lanes. Who knows? It is a world of uncertainty, friends, and -- Dylan notwithstanding -- you can't predict the way the wind will blow even if you've got a weatherman at your side.\n</p>\n\n<p>\n <br/>\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/77\">\n  Previous Route\n </a>\n |\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/79\">\n  Next Route\n </a>\n</p>\n",
+        "media": [
+            "http://www.thepassageride.com/wiki/uploads/Routes/78_windblows.jpg"
+        ],
+        "thumbs": [],
+        "geojson": "routes/078_in_absentia.geojson"
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "LineString",
+        "coordinates": [
+            [
+                -118.29294919967651,
+                34.06904931937216
+            ],
+            [
+                -118.2929277420044,
+                34.06736070195344
+            ],
+            [
+                -118.29164028167725,
+                34.06736070195344
+            ],
+            [
+                -118.29043865203857,
+                34.066880772966485
+            ],
+            [
+                -118.2899022102356,
+                34.067005199261175
+            ]
+        ]
+    },
+    "properties": {
+        "name": "Fun and Health",
+        "number": 35,
+        "url": "http://www.thepassageride.com/Routes/35",
+        "map_url": "http://www.gmap-pedometer.com/?r=3499603",
+        "description": "<p>\n <br/>\n <a class=\"urllink\" href=\"http://www.youtube.com/watch?v=3taEuL4EHAg\" rel=\"nofollow\" target=\"_blank\">\n  <img alt=\"\" src=\"media/http_www.thepassageride.com_wiki_uploads_routes_35_shatto.jpg\"/>\n </a>\n</p>\n\n<p>\n <a class=\"urllink\" href=\"http://www.gmap-pedometer.com/?r=3499603\" rel=\"nofollow\" target=\"_blank\">\n  Route map\n </a>\n</p>\n\n<p class=\"vspace\">\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/34\">\n  Previous Route\n </a>\n |\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/36\">\n  Next Route\n </a>\n</p>\n",
+        "media": [
+            "http://www.thepassageride.com/wiki/uploads/Routes/35_shatto.jpg"
+        ],
+        "thumbs": [],
+        "geojson": "routes/035_fun_and_health.geojson"
+    }
+}

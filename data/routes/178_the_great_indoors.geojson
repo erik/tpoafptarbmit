@@ -1,0 +1,60 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "LineString",
+        "coordinates": [
+            [
+                -118.293094,
+                34.06884047
+            ],
+            [
+                -118.29292,
+                34.06888
+            ],
+            [
+                -118.29293,
+                34.06737
+            ],
+            [
+                -118.29293,
+                34.06737
+            ],
+            [
+                -118.29165,
+                34.06738
+            ],
+            [
+                -118.29131,
+                34.06722
+            ],
+            [
+                -118.2910743,
+                34.06723405
+            ],
+            [
+                -118.2909972,
+                34.06721072
+            ],
+            [
+                -118.2909415,
+                34.06720295
+            ],
+            [
+                -118.2909194,
+                34.06721739
+            ]
+        ]
+    },
+    "properties": {
+        "name": "The Great Indoors",
+        "number": 178,
+        "url": "http://www.thepassageride.com/Routes/178",
+        "map_url": "http://www.gmap-pedometer.com/?r=5759968",
+        "description": "<p>\n <br/>\n <img alt=\"\" src=\"media/http_www.thepassageride.com_wiki_uploads_routes_178_postimage.jpg\" title=\"\"/>\n</p>\n\n<p class=\"vspace\">\n <br/>\n OK, so there is a good chance that as you read these words, it is raining. Or if it's not raining now, you should know that it is likely to be raining soon. Or in the event that you are reading this in the future, you should know that it was, at one time, going to rain. But then you already knew that, because you are in THE FUTURE. How is the THE FUTURE, by the way? Are you a robot? Do you have a jet pack? Are you a robotic jet pack?\n</p>\n\n<p class=\"vspace\">\n But we digress. The point is that here and now, in Los Angeles on 12/12/12, it is going to rain. Probably. This is what the weather models tell us, and we believe them to within whatever margins of error they have deemed acceptable. We believe their calculations go something like this:\n</p>\n\n<p class=\"vspace\">\n P(Rain | Wednesday, Bikes, Fun) = log(P(Fun | Rain)/P(Donuts | Bikes)) \u00b1 Rain%.\n</p>\n\n<p class=\"vspace\">\n If you are a robotic jet pack from THE FUTURE, then you are completely comfortable with these calculations. If, however, you are reading this in the here-and-now, in Los Angeles on 12/12/12, you might not be particularly excited about going outside in the rain regardless of what the models say. But the relevant question to ask yourself here is: are you really all that excited about staying home? On a Wednesday night? What if you could get all the social benefits of a group bike ride and still enjoy the comfort of staying indoors?\n</p>\n\n<p class=\"vspace\">\n Well you can! Because tonight, we will meet at the donut shop as usual, and then at 9PM, we will proceed to an indoor venue for crafting and/or games of some sort. Some materials will be provided, but if you have crafts of your own to bring, then by all means, bring them!\n</p>\n\n<p class=\"vspace\">\n P(Fun)=100%\n</p>\n\n<p>\n <a class=\"urllink\" href=\"http://www.gmap-pedometer.com/?r=5759968\" rel=\"nofollow\" target=\"_blank\">\n  Route Map\n </a>\n</p>\n\n<p class=\"vspace\">\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/177\">\n  Previous Route\n </a>\n |\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/179\">\n  Next Route\n </a>\n</p>\n",
+        "media": [
+            "http://www.thepassageride.com/wiki/uploads/Routes/178_postimage.jpg"
+        ],
+        "thumbs": [],
+        "geojson": "routes/178_the_great_indoors.geojson"
+    }
+}

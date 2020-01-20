@@ -1,0 +1,28 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "LineString",
+        "coordinates": [
+            [
+                -118.29317718744278,
+                34.06882491294374
+            ],
+            [
+                -118.29308867454529,
+                34.06882713479248
+            ]
+        ]
+    },
+    "properties": {
+        "name": "Schr\u00f6dinger's Cats & Dogs",
+        "number": 30,
+        "url": "http://www.thepassageride.com/Routes/30",
+        "map_url": "http://www.gmap-pedometer.com/?r=3424691",
+        "description": "<p>\n <br/>\n <img alt=\"\" src=\"media/http_www.thepassageride.com_wiki_uploads_routes_30_schrodingers_cat.gif\" title=\"\"/>\n</p>\n\n<p class=\"vspace\">\n <br/>\n If it's not raining this Wednesday night at California Donuts #21 in this universe, we will ride, here in this universe.\n</p>\n\n<p class=\"vspace\">\n If it IS raining this Wednesday night at California Donuts #21 in this universe, we will do our riding in some other universe (indeed, in many other universes), while here in this one we remain comfortably dry in our houses.\n</p>\n\n<p class=\"vspace\">\n It is useful sometimes to delegate the difficult tasks to one's alternate quantum identities. We are clever this way.\n</p>\n\n<p>\n <a class=\"urllink\" href=\"http://www.gmap-pedometer.com/?r=3424691\" rel=\"nofollow\" target=\"_blank\">\n  Route map\n </a>\n</p>\n\n<p class=\"vspace\">\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/29\">\n  Previous Route\n </a>\n |\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/31\">\n  Next Route\n </a>\n <br clear=\"all\"/>\n <br clear=\"all\"/>\n</p>\n",
+        "media": [
+            "http://www.thepassageride.com/wiki/uploads/Routes/30_schrodingers-cat.gif"
+        ],
+        "thumbs": [],
+        "geojson": "routes/030_schr_dinger_s_cats_dogs.geojson"
+    }
+}

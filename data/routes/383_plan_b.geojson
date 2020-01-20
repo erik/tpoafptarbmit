@@ -1,0 +1,48 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "LineString",
+        "coordinates": [
+            [
+                -118.2930994,
+                34.06886268
+            ],
+            [
+                -118.2929116,
+                34.06884491
+            ],
+            [
+                -118.292917,
+                34.06737403
+            ],
+            [
+                -118.2916671,
+                34.06736515
+            ],
+            [
+                -118.2912164,
+                34.06719184
+            ],
+            [
+                -118.2910823,
+                34.06723628
+            ],
+            [
+                -118.2910662,
+                34.0674718
+            ]
+        ]
+    },
+    "properties": {
+        "name": "Plan B",
+        "number": 383,
+        "url": "http://www.thepassageride.com/Routes/383",
+        "map_url": "http://www.gmap-pedometer.com/?r=6998494",
+        "description": "<p>\n <br/>\n <img alt=\"\" src=\"media/http_www.thepassageride.com_wiki_uploads_routes_383_postimage.jpg\" title=\"\"/>\n</p>\n\n<p class=\"vspace\">\n <br/>\n If by some miracle the rain that is forecast to continue through the evening does let up, and at 9pm there is a nice clear sky that doesn't appear about to dump more water upon our heads, then there will indeed be a ride of some sort, as usual.\n</p>\n\n<p class=\"vspace\">\n In all other circumstances,\n <a class=\"urllink\" href=\"http://www.thepassageride.com/FAQ#rain\" rel=\"nofollow\" target=\"_blank\">\n  the Bowling Clause of our contract\n </a>\n will be triggered.\n</p>\n\n<p>\n <a class=\"urllink\" href=\"http://www.gmap-pedometer.com/?r=6998494\" rel=\"nofollow\" target=\"_blank\">\n  Route Map\n </a>\n</p>\n\n<p class=\"vspace\">\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/382\">\n  Previous Route\n </a>\n |\n <a class=\"wikilink\" href=\"http://www.thepassageride.com/Routes/384\">\n  Next Route\n </a>\n</p>\n",
+        "media": [
+            "http://www.thepassageride.com/wiki/uploads/Routes/383_postimage.jpg"
+        ],
+        "thumbs": [],
+        "geojson": "routes/383_plan_b.geojson"
+    }
+}
