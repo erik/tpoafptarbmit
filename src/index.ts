@@ -43,6 +43,8 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
 }
 
 (function() {
+    const mapContainer = document.querySelector('#map');
+
     const donutShop = L.marker(CALIFORNIA_DONUTS, {
         icon: L.divIcon({
             className: 'donut-shop-icon',
@@ -146,10 +148,9 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
             if (layer === null) return;
 
             selectLayer(num, layer);
-            // Back to the top
-            // TODO: Scroll not to the top of the page, but the top of the map
-            window.scrollTo(0, 0);
             layer.openPopup();
+
+            mapContainer.scrollIntoView(/* alignToTop = */ true);
         }
 
         routes.features.reverse().forEach((route, i) => {
