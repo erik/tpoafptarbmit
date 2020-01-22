@@ -1,6 +1,8 @@
 import * as L from 'leaflet';
 import * as GeoJson from 'geojson';
 
+import { toGpx } from './gpx';
+
 
 const CALIFORNIA_DONUTS = {lat: 34.0688093, lng: -118.2930864};
 
@@ -35,6 +37,29 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
         .then(json => <GeoJson.FeatureCollection>json);
 }
 
+// Given a URL containing GeoJSON data, fetch it and convert it to
+// GPX.
+//
+// TODO: defining the callback this way is a lazy hack.
+(<any>window).downloadGpx = (url: string): void => {
+    fetch(url)
+        .then(r => r.json())
+        .then(json => <GeoJson.Feature<GeoJson.LineString, GeoJson.GeoJsonProperties>>json)
+        .then(geo => {
+            const name = geo.properties!.name!;
+            const coords = geo.geometry!.coordinates!;
+
+            const xml = toGpx(name, coords);
+            const b64 = btoa(xml);
+
+            // Trigger file download.
+            const a = document.createElement('a');
+            a.download = `${name}.gpx`;
+            a.href = `data:application/gpx+xml;base64,${b64}`;
+            a.click();
+        });
+}
+
 (function() {
     const mapContainer = document.querySelector('#map');
 
@@ -59,11 +84,17 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
         .addTo(map);
 
     // TODO: Link out to geojson.io for full resolution map.
-    const popupForFeature = (props: GeoJson.GeoJsonProperties) => `
+    // TODO: It would be far better to return a DOM node than a string here.
+    const popupForFeature = (props: GeoJson.GeoJsonProperties) => {
+       return `
 <div class="route-info">
-<h1 class="text-xl font-bold">#${props?.number ?? ''} - ${props?.name ?? 'Unnamed'}</h1>
-<div class="text-sm">${props?.description ?? 'No description.'}</div>
+  <h1 class="text-xl font-bold">#${props?.number ?? ''} - ${props?.name ?? 'Unnamed'}</h1>
+  <div class="text-sm">
+    ${props?.description ?? 'No description.'}
+    <a href="#" onclick="downloadGpx('${props?.geojson}')">Download GPX</a>
+  </div>
 </div>`;
+    };
 
     const routeStyles: {[key: string]: L.PathOptions} = {
         base: {
@@ -139,7 +170,7 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
             selectLayer(num, layer);
             layer.openPopup();
 
-            mapContainer.scrollIntoView(/* alignToTop = */ true);
+            mapContainer!.scrollIntoView(/* alignToTop = */ true);
         }
 
         routes.features.reverse().forEach((route, i) => {
