@@ -83,15 +83,14 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
         })
         .addTo(map);
 
-    // TODO: Link out to geojson.io for full resolution map.
     // TODO: It would be far better to return a DOM node than a string here.
     const popupForFeature = (props: GeoJson.GeoJsonProperties) => {
-       return `
+        return `
 <div class="route-info">
-  <h1 class="text-xl font-bold">#${props?.number ?? ''} - ${props?.name ?? 'Unnamed'}</h1>
+  <h1 class="text-xl font-bold">#${props!.number} - ${props!.name}</h1>
   <div class="text-sm">
-    ${props?.description ?? 'No description.'}
-    <a href="#" onclick="downloadGpx('${props?.geojson}')">Download GPX</a>
+    ${props!.description ?? 'No description.'}
+    <a href="#" onclick="downloadGpx('${props!.geojson}')">Download GPX</a>
   </div>
 </div>`;
     };
