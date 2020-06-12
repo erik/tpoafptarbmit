@@ -104,10 +104,18 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
             color: '#B61326',
             weight: 3,
         },
+        hide: {
+            color: '#000',
+            weight: 0,
+        }
     };
 
     // Last route we had highlighted, so that it can be cleared.
     let previousRoute: L.FeatureGroup | null;
+
+    // High-resolution route, we want to remove this from the map
+    // when switching
+    let hiresRoute: L.FeatureGroup | null;
 
     // Track each route individually rather than adding the entire geoJson
     // object to the map at once.
@@ -117,6 +125,10 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
         previousRoute?.closePopup();
         previousRoute?.setStyle(routeStyles.base);
         previousRoute = layer;
+
+        if (hiresRoute != null) {
+            map.removeLayer(hiresRoute);
+        }
 
         layer.bringToFront();
         layer.setStyle(routeStyles.highlight);
@@ -137,6 +149,19 @@ function fetchRoutes(): Promise<GeoJson.FeatureCollection> {
 
         highlightLayer(lg);
         map.fitBounds(lg.getBounds());
+
+        const props = lg.feature?.properties;
+        if (props?.geojson != null) {
+          fetch(props.geojson)
+            .then(r => r.json())
+            .then(json => {
+              hiresRoute = L.geoJSON(json).addTo(map);
+
+              previousRoute?.setStyle(routeStyles.hide);
+              hiresRoute.setStyle(routeStyles.highlight);
+            })
+            .catch(exc => console.error('Loading high resolution route failed', exc));
+        }
     };
 
     const createGeoJsonLayer = (routes: GeoJson.FeatureCollection) => L.geoJSON(routes, {
